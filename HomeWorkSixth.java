@@ -47,7 +47,7 @@ abstract class Animal implements AnAnimal{
 
     @Override
     public String toString() {
-        return className + " Run limit " + runLimit + " Swim limit " + swimLimit;
+        return className + ": Run limit " + runLimit + " meters, Swim limit " + swimLimit + " meters";
     }
 
     public String swim(int distance) {
