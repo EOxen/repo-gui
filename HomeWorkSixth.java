@@ -11,13 +11,13 @@ class HomeWorkSixth {
         Dog dog = new Dog(500, 10);
         Animal[] animals = {cat, dog};
         for (AnAnimal animal : animals) {
-            System.out.println();
             System.out.println(animal);
             System.out.println(animal.run(100));
             System.out.println(animal.swim(10));
             System.out.println(animal.run(220));
             System.out.println(animal.swim(14));
             System.out.println(animal.run(600));
+            System.out.println();
         }
     }
 }
@@ -37,17 +37,17 @@ abstract class Animal implements AnAnimal{
         return className;
     }
 
+    @Override
+    public String toString() {
+        return className + ": Run limit " + runLimit + " meters, Swim limit " + swimLimit + " meters";
+    }
+
     public String run(int distance) {
         if (distance > runLimit) {
             return className + " couldn't run " + distance + " meters";
         } else {
             return className + " ran " + distance + " meters";
         }
-    }
-
-    @Override
-    public String toString() {
-        return className + ": Run limit " + runLimit + " meters, Swim limit " + swimLimit + " meters";
     }
 
     public String swim(int distance) {
