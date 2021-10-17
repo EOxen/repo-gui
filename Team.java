@@ -6,7 +6,7 @@
  */
 
 public class Team {
-    private String tName = "DREAM";
+    private static String tName;
     private String name;
     private int runLimit;
     private int longJumpLimit;
@@ -21,13 +21,17 @@ public class Team {
         successfully = successfully;
     }
 
+    public void setTeamName(String tName) {
+        this.tName = tName;
+    }
+
     public String getTeamName() {
         return tName;
     }
 
     public void info() {
         if (successfully == true) {
-            System.out.println(name + " Successfully completed the distance");
+            System.out.println(name + " successfully completed the distance");
         }
     }
 
