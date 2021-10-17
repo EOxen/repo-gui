@@ -17,7 +17,11 @@ public class DreamTeam {
         course.info();
         System.out.println();
         for (Team team : teams) {
-            System.out.print("Team " + team.getTeamName() + " , member: ");
+            team.setTeamName("Dream");
+            System.out.println("Team " + team.getTeamName() + " , members: ");
+            break;
+        }
+        for (Team team : teams) {
             System.out.println(team);
         }
         System.out.println();
